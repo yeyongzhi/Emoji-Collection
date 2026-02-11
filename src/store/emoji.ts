@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
-import { ref, watch } from "vue";
-import { fetchFromCDN, fetchEmojis, fetchShortcodes, fetchMessages } from "emojibase";
+import { ref } from "vue";
+import { fetchEmojis, fetchShortcodes, fetchMessages } from "emojibase";
 
 export const useEmojiStore = defineStore("emoji", () => {
   const loading = ref(false);
@@ -10,11 +10,8 @@ export const useEmojiStore = defineStore("emoji", () => {
   const getEmojiData = async () => {
     loading.value = true;
     const zhEmojis = await fetchEmojis("zh", { compact: true });
-    // console.log(zhEmojis);
-    const shortcodes = await fetchShortcodes("zh", 'cldr');
-    // console.log(shortcodes);
+    // const shortcodes = await fetchShortcodes("zh", 'cldr');
     const messages = await fetchMessages("zh");
-    // console.log(messages);
     emojiData.value = zhEmojis;
     emojiGroupData.value = messages.groups;
     loading.value = false;

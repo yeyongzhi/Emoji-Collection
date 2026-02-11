@@ -2,8 +2,9 @@ import APP_MENU from "@/menu/index";
 import { defineStore } from "pinia";
 import { ref, watch, computed } from "vue";
 import { toast } from 'vue-sonner'
+import { useColorMode } from '@vueuse/core'
 
-const DEFAULT_THEME = "light";
+const mode = useColorMode()
 
 export const useAppStore = defineStore("app", () => {
   const themeOptions = [
@@ -19,11 +20,11 @@ export const useAppStore = defineStore("app", () => {
   const isDark = ref<boolean>(false);
   watch(isDark, (newVal) => {
     toast.success(newVal ? "已切换到暗色模式" : "已切换到亮色模式")
+    mode.value = newVal ? 'dark' : 'light'
   })
 
   const menuKey = ref<string>("base")
   const handleMenuSelect = (key: string) => {
-    console.log(key)
     menuKey.value = key
   }
   const currentMenuComponent = computed(() => {

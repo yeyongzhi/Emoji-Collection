@@ -48,10 +48,12 @@ const open = ref(false)
 <template>
     <div class="border rounded-xl p-(--padding-s) flex-col justify-center items-center">
         <div title="点击复制" class="value text-center text-2xl" @click="copyEmoji(data.unicode)">{{ data.unicode }}</div>
-        <div title="点击复制" class="w-full text-center mt-(--margin-s)" @click="copyEmoji(data.label)">{{ data.label }}
+        <div title="点击复制" class="text-xs w-full text-center mt-(--margin-s)" @click="copyEmoji(data.label)">{{ data.label }}
         </div>
-        <div class="w-full mt-(--margin-s) flex gap-(--margin-s) justify-center items-center">
-            <TooltipProvider>
+        <div class="w-full mt-(--margin-s) flex gap-(--margin-xs) justify-center items-center">
+            <Button @click="open = true" size="sm" variant="secondary" class="cursor-pointer">详情</Button>
+            <Button size="sm" variant="secondary" class="cursor-pointer">收藏</Button>
+            <!-- <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger>
                         <Button @click="open = true" size="sm" variant="secondary" class="cursor-pointer">详情</Button>
@@ -70,7 +72,7 @@ const open = ref(false)
                         <p>点击收藏</p>
                     </TooltipContent>
                 </Tooltip>
-            </TooltipProvider>
+            </TooltipProvider> -->
         </div>
         <Dialog v-model:open="open">
             <DialogContent>
@@ -82,8 +84,8 @@ const open = ref(false)
                     <div class="text-center text-8xl">{{ data.unicode }}</div>
                     <div
                         class="w-full mt-(--margin-xl) p-(--padding-m) flex gap-(--margin-m) justify-center items-center">
-                        <Button @click="copyEmoji(data.unicode)" class="cursor-pointer">复制</Button>
-                        <Button @click="likeEmoji" class="cursor-pointer">收藏</Button>
+                        <Button variant="secondary" @click="copyEmoji(data.unicode)" class="cursor-pointer">复制</Button>
+                        <Button variant="secondary" @click="likeEmoji" class="cursor-pointer">收藏</Button>
                     </div>
                     <div
                         class="details w-full mx-auto mt-(--margin-xl) p-(--padding-m) flex flex-col gap-(--margin-m) justify-center items-center">
@@ -100,7 +102,8 @@ const open = ref(false)
                                 标签
                             </div>
                             <div class="flex-1 flex w-full flex-wrap gap-(--margin-m)">
-                                <Badge class="px-(--padding-m) py-(--padding-xxs)" v-for="item in data.tags" :key="item">
+                                <Badge class="px-(--padding-m) py-(--padding-xxs)" v-for="item in data.tags"
+                                    :key="item">
                                     {{ item }}
                                 </Badge>
                             </div>
@@ -116,13 +119,12 @@ const open = ref(false)
 .value {
     &:hover {
         cursor: pointer;
-        font-size: var(--text-2xl);
-        line-height: var(--text-2xl--line-height);
+        scale: 1.6;
+        transition: all 0.2s ease-in-out;
     }
 }
 
 .details {
-
     .label {
         font-size: var(--text-md);
         line-height: var(--text-md--line-height);

@@ -10,6 +10,11 @@ const APP_MENU = [
         key: "code",
         name: "程序猿常用💻️",
         component: defineAsyncComponent(() => import('@/views/code/index.vue'))
+    },
+    {
+        key: "like",
+        name: "我的收藏❤️",
+        component: defineAsyncComponent(() => import('@/views/like/index.vue'))
     }
 ]
 

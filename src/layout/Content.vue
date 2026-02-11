@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ScrollArea } from '@/components/ui/scroll-area'
 import { Spinner } from '@/components/ui/spinner'
 import { useEmojiStore, useAppStore } from '@/store/index'
 import { onMounted } from 'vue'
@@ -19,12 +18,12 @@ onMounted(() => {
             <Spinner class="size-6" />
             正在加载中
         </div>
-        <ScrollArea class="content_scroll_area h-full w-full p-4" v-else asChild>
+        <div class="h-full w-full overflow-hidden" v-else asChild>
             <component :is="appStore.currentMenuComponent" />
-        </ScrollArea>
+        </div>
     </div>
 </template>
 
 <style scoped lang="scss">
-.content_scroll_area {}
+
 </style>
