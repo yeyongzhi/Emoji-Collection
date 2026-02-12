@@ -1,0 +1,1 @@
+import{_ as e}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{o,c}from"./index-BP-U1A0f.js";const r={},s={class:"w-full h-full"};function t(n,_){return o(),c("div",s," version ")}const l=e(r,[["render",t]]);export{l as default};
