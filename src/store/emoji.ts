@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import { ref, computed } from "vue";
-import { fetchEmojis, fetchShortcodes, fetchMessages } from "emojibase";
+import { fetchEmojis, fetchMessages } from "emojibase";
 
 const EMOJI_LIKE_KEY = 'emoji_like'
 const EMOJI_HISTORY_KEY = 'emoji_history'
