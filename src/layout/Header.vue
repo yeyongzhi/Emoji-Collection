@@ -14,7 +14,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
-import { Label } from '@/components/ui/label'
 import { useAppStore } from '@/store/index'
 import APP_MENU from '@/menu/index'
 
