@@ -1,0 +1,1 @@
+import{al as o,m as a,p as r}from"./index-CnjPEUAT.js";function u(e,n=Number.NEGATIVE_INFINITY,t=Number.POSITIVE_INFINITY){return Math.min(t,Math.max(n,e))}function m(e){const n=o({nonce:a()});return r(()=>e?.value||n.nonce?.value)}export{u as c,m as u};
