@@ -10,9 +10,6 @@ import {
     ItemTitle,
 } from '@/components/ui/item'
 import KnowImg from '@/assets/images/know.jpg'
-import { useAppStore } from '@/store/app'
-
-const appStore = useAppStore()
 
 const data = ref<any>([])
 const title = ref('版本更新日志')
