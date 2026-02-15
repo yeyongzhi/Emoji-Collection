@@ -18,3 +18,7 @@ export async function copyText(text: string) {
     return false
   }
 }
+
+export function isSysetmDarkMode() {
+  return window.matchMedia &&  window.matchMedia('(prefers-color-scheme: dark)').matches;
+}

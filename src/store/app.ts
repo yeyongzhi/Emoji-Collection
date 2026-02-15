@@ -3,8 +3,10 @@ import { defineStore } from "pinia";
 import { ref, watch, computed } from "vue";
 import { toast } from 'vue-sonner'
 import { useColorMode } from '@vueuse/core'
+import { isSysetmDarkMode } from "@/utils/index";
 
 const mode = useColorMode()
+mode.value = isSysetmDarkMode() ? 'dark' : 'light'
 
 const LOCAL_MENU_KEY = 'EMOJI_COLLECTION_MENU_KEY'
 const DEFAULT_MENU_KEY = 'base'
@@ -20,7 +22,8 @@ export const useAppStore = defineStore("app", () => {
             value: "dark",
         },
     ];
-    const isDark = ref<boolean>(false);
+    const isDark = ref<boolean>(isSysetmDarkMode());
+    
     watch(isDark, (newVal) => {
         toast.success(newVal ? "已切换到暗色模式" : "已切换到亮色模式")
         mode.value = newVal ? 'dark' : 'light'

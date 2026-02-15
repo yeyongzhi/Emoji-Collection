@@ -19,11 +19,15 @@ import APP_MENU from '@/menu/index'
 
 const appStore = useAppStore()
 
+const refresh = () => {
+  window.location.reload()
+}
+
 </script>
 
 <template>
   <div class="border border-b w-full flex justify-between items-center h-[60px] p-(--padding-l) box-border">
-    <div class="font-bold text-2xl flex items-center">
+    <div class="font-bold text-2xl flex items-center cursor-pointer" @click="refresh">
       Emoji 使用指南【看这就够了】
     </div>
     <div class="flex justify-center items-center gap-x-(--margin-xs)">
@@ -56,7 +60,7 @@ const appStore = useAppStore()
             <Switch v-model="appStore.isDark" />
           </TooltipTrigger>
           <TooltipContent>
-            <p>切换主题</p>
+            <p>{{ appStore.isDark ? '切换到亮色模式' : '切换到暗色模式' }}</p>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
