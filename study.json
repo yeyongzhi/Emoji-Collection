@@ -1,0 +1,21 @@
+{
+  "name": "学习 & 考研党Emoji",
+  "data": [
+    {
+      "key": "top",
+      "name": "📚 学习 & 考研党",
+      "data": [
+        { "emoji": "📖", "hexcode": "1F4D6", "description": "背书/复习" },
+        { "emoji": "✏️", "hexcode": "270F", "description": "做笔记" },
+        { "emoji": "⏰", "hexcode": "23F0", "description": "倒计时/时间紧" },
+        { "emoji": "🧠", "hexcode": "1F9E0", "description": "动脑/理解" },
+        { "emoji": "🎯", "hexcode": "1F3AF", "description": "目标院校" },
+        { "emoji": "📅", "hexcode": "1F4C5", "description": "计划表/打卡" },
+        { "emoji": "💪", "hexcode": "1F4AA", "description": "坚持/加油" },
+        { "emoji": "😴", "hexcode": "1F634", "description": "困了但不能睡" },
+        { "emoji": "🎓", "hexcode": "1F393", "description": "上岸/毕业" },
+        { "emoji": "🙏", "hexcode": "1F64F", "description": "求过/保佑" }
+      ]
+    }
+  ]
+}
