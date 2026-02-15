@@ -8,8 +8,8 @@ const APP_MENU = [
   },
   {
     key: "code",
-    name: "程序猿常用💻️",
-    component: defineAsyncComponent(() => import("@/views/code/index.vue")),
+    name: "常用📄",
+    component: defineAsyncComponent(() => import("@/views/useful/index.vue")),
   },
   {
     key: "like",

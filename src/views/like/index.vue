@@ -11,6 +11,7 @@ import {
     EmptyTitle,
 } from '@/components/ui/empty'
 import { Button } from '@/components/ui/button'
+import { FolderCode } from 'lucide-vue-next'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import EmojiItem from '@/views/components/EmojiItem.vue'
@@ -27,7 +28,7 @@ const likeData = computed(() => {
     })
     if (searchWord.value && searchWord.value.length > 0) {
         list = list.filter((item: any) => {
-            return item.label.includes(searchWord.value) || item.tags.includes(searchWord.value) || item.unicode.includes(searchWord.value)
+            return (item.label && item.label.includes(search.value)) || (item.tags && item.tags.includes(search.value)) || (item.unicode && item.unicode.includes(search.value))
         })
     }
     return list
@@ -50,7 +51,7 @@ const searchWord = computed(() => {
         <Empty class="w-full h-full" v-if="likeItems.length === 0">
             <EmptyHeader>
                 <EmptyMedia variant="icon">
-                    <!-- <FolderOpen /> -->
+                    <FolderCode />
                 </EmptyMedia>
             </EmptyHeader>
             <EmptyTitle>暂无收藏💔</EmptyTitle>

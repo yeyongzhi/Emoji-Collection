@@ -7,19 +7,44 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
 import { useEmojiStore } from '@/store/index'
-import { onMounted, onUnmounted, ref, nextTick, computed } from 'vue'
+import { onMounted, onUnmounted, ref, nextTick, computed, watch } from 'vue'
 import EmojiItem from '@/views/components/EmojiItem.vue'
 
 const EMOJI_GROUP_ID_PREFIX = 'emoji-group-'
 
 const emojiStore = useEmojiStore()
 
+const search = ref('')
+const searchData = ref<any>([])
+
+const initSearchData = () => {
+    let list = emojiStore.emojiData
+    list = list.filter((item: any) => {
+        return (item.label && item.label.includes(search.value)) || (item.tags && item.tags.includes(search.value)) || (item.unicode && item.unicode.includes(search.value))
+    })
+    searchData.value = list
+}
+let interval: any = null
+watch(search, (newValue: string, oldValue: string) => {
+    if (newValue !== oldValue && newValue.trim().length > 0) {
+        if (interval) {
+            clearInterval(interval)
+        }
+        interval = setTimeout(() => {
+            initSearchData()
+        }, 500)
+    } else {
+        searchData.value = []
+    }
+})
+
 const data = ref<any>([])
 
 const groups = computed(() => {
     let list = JSON.parse(JSON.stringify(emojiStore.emojiGroupData))
-    return list.slice(0, 1)
+    return list
 })
 
 const initData = async () => {
@@ -36,7 +61,6 @@ const initData = async () => {
             children: value.filter((emoji: any) => emoji.group === groupIndex)
         })
     })
-    console.log(list);
     data.value = list
 }
 
@@ -104,30 +128,47 @@ onUnmounted(() => {
             <CardContent>
                 <Tabs v-model="groupIndex" orientation="vertical" data-orientation="vertical">
                     <TabsList class="flex-col flex w-full h-fit gap-y-(--margin-xxs)">
-                        <TabsTrigger class="w-full" :value="group.key" v-for="group in groups"
-                            :key="group.key" @click="scrollToGroup(group.key)">
+                        <TabsTrigger class="w-full" :value="group.key" v-for="group in groups" :key="group.key"
+                            @click="scrollToGroup(group.key)">
                             {{ group.message }}
                         </TabsTrigger>
                     </TabsList>
                 </Tabs>
             </CardContent>
         </Card>
-        <div class="h-full flex-1">
-            <ScrollArea class="w-full h-full">
-                <Card :class="`${index === data.length - 1 ? 'mt-0' : 'mb-(--margin-xl)'}`"
-                    v-for="(item, index) in data" :key="item.key" :id="`${EMOJI_GROUP_ID_PREFIX}${item.key}`">
-                    <CardHeader>
-                        <CardTitle class="app_page_title w-full font-bold text-2xl">{{ item.name }}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
+        <div class="flex-1 h-full flex flex-col gap-y-(--margin-l) overflow-hidden">
+            <div class="flex items-center gap-(--margin-xs)">
+                <Input v-model="search" class="w-[400px]" placeholder="请输入关键字进行搜索" />
+            </div>
+            <div class="w-full flex-1 overflow-hidden">
+                <ScrollArea class="w-full h-full" id="scrollAreaEl">
+                    <template v-if="searchData.length === 0">
+                        <template v-for="(item, index) in data" :key="item.key">
+                            <Card :class="`${index === data.length - 1 ? 'mt-0' : 'mb-(--margin-xl)'}`"
+                                :id="`${EMOJI_GROUP_ID_PREFIX}${item.key}`">
+                                <CardHeader>
+                                    <CardTitle class="app_page_title w-full font-bold text-2xl">{{ item.name }}
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <div class="w-full grid grid-cols-10 gap-(--margin-s)">
+                                        <div v-for="emoji in item.children" :key="emoji.key">
+                                            <EmojiItem :data="emoji" />
+                                        </div>
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </template>
+                    </template>
+                    <template v-else>
                         <div class="w-full grid grid-cols-10 gap-(--margin-s)">
-                            <div v-for="emoji in item.children" :key="emoji.key">
+                            <div v-for="emoji in searchData" :key="emoji.key">
                                 <EmojiItem :data="emoji" />
                             </div>
                         </div>
-                    </CardContent>
-                </Card>
-            </ScrollArea>
+                    </template>
+                </ScrollArea>
+            </div>
         </div>
     </div>
 </template>

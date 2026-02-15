@@ -1,0 +1,21 @@
+{
+  "name": "电商 & 带货文案Emoji",
+  "data": [
+    {
+      "key": "top",
+      "name": "🛒 电商 & 带货文案",
+      "data": [
+        { "emoji": "💥", "hexcode": "1F4A5", "description": "限时抢购" },
+        { "emoji": "🎁", "hexcode": "1F381", "description": "赠品/福利" },
+        { "emoji": "💰", "hexcode": "1F4B0", "description": "省钱/划算" },
+        { "emoji": "⚡", "hexcode": "26A1", "description": "秒杀/速抢" },
+        { "emoji": "📦", "hexcode": "1F4E6", "description": "发货/物流" },
+        { "emoji": "⭐", "hexcode": "2B50", "description": "好评/高分" },
+        { "emoji": "🚨", "hexcode": "1F6A8", "description": "库存告急" },
+        { "emoji": "🎯", "hexcode": "1F3AF", "description": "精准推荐" },
+        { "emoji": "🛒", "hexcode": "1F6D2", "description": "下单/购物车" },
+        { "emoji": "🤫", "hexcode": "1F92B", "description": "内部价/偷偷说" }
+      ]
+    }
+  ]
+}

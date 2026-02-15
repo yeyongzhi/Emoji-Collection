@@ -15,7 +15,7 @@ onMounted(() => {
 <template>
     <div class="overflow-hidden w-full flex-1 p-(--padding-l) box-border">
         <div class="h-full w-full flex justify-center items-center" v-if="emojiStore.loading">
-            <Spinner class="size-6" />
+            <Spinner class="size-6 mr-(--margin-xs)" />
             正在加载中
         </div>
         <div class="h-full w-full overflow-hidden" v-else asChild>

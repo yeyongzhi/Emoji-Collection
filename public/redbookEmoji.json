@@ -1,0 +1,117 @@
+{
+  "name": "小红书常用Emoji",
+  "data": [
+    {
+      "key": "top",
+      "name": "🔥最常用 Top 10",
+      "data": [
+        { "emoji": "✨", "hexcode": "2728", "description": "高光/超赞效果" },
+        { "emoji": "💄", "hexcode": "1F484", "description": "美妆/口红" },
+        { "emoji": "👗", "hexcode": "1F457", "description": "穿搭/连衣裙" },
+        { "emoji": "🍜", "hexcode": "1F35C", "description": "美食探店" },
+        { "emoji": "📸", "hexcode": "1F4F8", "description": "拍照/打卡" },
+        { "emoji": "❤️", "hexcode": "2764", "description": "喜欢/种草" },
+        { "emoji": "🌟", "hexcode": "1F31F", "description": "推荐/必买" },
+        { "emoji": "🧋", "hexcode": "1F9CB", "description": "奶茶/饮品" },
+        { "emoji": "✈️", "hexcode": "2708", "description": "旅行/出游" },
+        { "emoji": "🏡", "hexcode": "1F3E1", "description": "家居/生活" }
+      ]
+    },
+    {
+      "key": "beauty",
+      "name": "💄 美妆护肤类",
+      "data": [
+        { "emoji": "💄", "hexcode": "1F484", "description": "唇妆 / 美妆" },
+        { "emoji": "🧴", "hexcode": "1F9F4", "description": "护肤 / 面霜" },
+        { "emoji": "💆‍♀️", "hexcode": "1F486-200D-2640-FE0F", "description": "护理 / SPA" },
+        { "emoji": "✨", "hexcode": "2728", "description": "闪亮 / 效果好" },
+        { "emoji": "🌟", "hexcode": "1F31F", "description": "推荐 / 必买" },
+        { "emoji": "🧼", "hexcode": "1F9FC", "description": "清洁 / 洁面" },
+        { "emoji": "🧖‍♀️", "hexcode": "1F9D6-200D-2640-FE0F", "description": "面膜 / 蒸汽浴" },
+        { "emoji": "👄", "hexcode": "1F444", "description": "嘴唇 / 口红试色" },
+        { "emoji": "🪞", "hexcode": "1FA9E", "description": "化妆镜" }
+      ]
+    },
+    {
+      "key": "fashion",
+      "name": "👗 穿搭时尚类",
+      "data": [
+        { "emoji": "👗", "hexcode": "1F457", "description": "连衣裙" },
+        { "emoji": "👖", "hexcode": "1F456", "description": "牛仔裤" },
+        { "emoji": "👟", "hexcode": "1F45F", "description": "运动鞋" },
+        { "emoji": "👠", "hexcode": "1F460", "description": "高跟鞋" },
+        { "emoji": "👜", "hexcode": "1F45C", "description": "包包" },
+        { "emoji": "🧥", "hexcode": "1F9E5", "description": "外套 / 风衣" },
+        { "emoji": "👒", "hexcode": "1F452", "description": "帽子 / 配饰" },
+        { "emoji": "💃", "hexcode": "1F483", "description": "搭配效果 / 出街照" },
+        { "emoji": "📸", "hexcode": "1F4F8", "description": "街拍 / 自拍" },
+        { "emoji": "🪞", "hexcode": "1FA9E", "description": "试衣间" }
+      ]
+    },
+    {
+      "key": "food",
+      "name": "🍜 美食探店类",
+      "data": [
+        { "emoji": "🍜", "hexcode": "1F35C", "description": "面食 / 探店" },
+        { "emoji": "🍰", "hexcode": "1F370", "description": "甜品" },
+        { "emoji": "☕", "hexcode": "2615", "description": "咖啡" },
+        { "emoji": "🍵", "hexcode": "1F375", "description": "茶饮" },
+        { "emoji": "🍣", "hexcode": "1F363", "description": "日料" },
+        { "emoji": "🍕", "hexcode": "1F355", "description": "西餐" },
+        { "emoji": "🥗", "hexcode": "1F957", "description": "健康餐" },
+        { "emoji": "🧋", "hexcode": "1F9CB", "description": "奶茶（常配珍珠emoji）" },
+        { "emoji": "🥢", "hexcode": "1F962", "description": "中餐" },
+        { "emoji": "😋", "hexcode": "1F60B", "description": "好吃 / 推荐" },
+        { "emoji": "🤤", "hexcode": "1F924", "description": "流口水 / 超想吃" }
+      ]
+    },
+    {
+      "key": "travel",
+      "name": "✈️ 旅行出游类",
+      "data": [
+        { "emoji": "✈️", "hexcode": "2708", "description": "飞行 / 出游" },
+        { "emoji": "🏖️", "hexcode": "1F3D6-FE0F", "description": "海滩度假" },
+        { "emoji": "🏞️", "hexcode": "1F3DE-FE0F", "description": "自然风光" },
+        { "emoji": "🏙️", "hexcode": "1F3D9-FE0F", "description": "城市打卡" },
+        { "emoji": "🗺️", "hexcode": "1F5FA-FE0F", "description": "路线 / 攻略" },
+        { "emoji": "📷", "hexcode": "1F4F7", "description": "拍照打卡" },
+        { "emoji": "🧳", "hexcode": "1F9F3", "description": "行李箱" },
+        { "emoji": "🚗", "hexcode": "1F697", "description": "自驾游" },
+        { "emoji": "🏨", "hexcode": "1F3E8", "description": "住宿 / 民宿" },
+        { "emoji": "🌅", "hexcode": "1F305", "description": "日出 / 日落美景" }
+      ]
+    },
+    {
+      "key": "lifestyle",
+      "name": "🏡 生活日常 & 居家类",
+      "data": [
+        { "emoji": "🏡", "hexcode": "1F3E1", "description": "家居布置" },
+        { "emoji": "🕯️", "hexcode": "1F56F", "description": "氛围感" },
+        { "emoji": "🌿", "hexcode": "1F33F", "description": "绿植 / 治愈" },
+        { "emoji": "🧺", "hexcode": "1F9FA", "description": "收纳整理" },
+        { "emoji": "🧹", "hexcode": "1F9F9", "description": "打扫清洁" },
+        { "emoji": "🛏️", "hexcode": "1F6CF-FE0F", "description": "卧室 / 床品" },
+        { "emoji": "🍽️", "hexcode": "1F37D-FE0F", "description": "餐桌布置" },
+        { "emoji": "📚", "hexcode": "1F4DA", "description": "读书 / 学习角落" }
+      ]
+    },
+    {
+      "key": "emotion",
+      "name": "❤️ 通用情绪 & 强调类",
+      "data": [
+        { "emoji": "❤️", "hexcode": "2764", "description": "喜欢 / 爱了" },
+        { "emoji": "💕", "hexcode": "1F495", "description": "喜欢 / 爱了" },
+        { "emoji": "💖", "hexcode": "1F496", "description": "喜欢 / 爱了" },
+        { "emoji": "✨", "hexcode": "2728", "description": "高光时刻 / 超赞" },
+        { "emoji": "🔥", "hexcode": "1F525", "description": "热门 / 超火" },
+        { "emoji": "⭐", "hexcode": "2B50", "description": "推荐指数" },
+        { "emoji": "❗", "hexcode": "2757", "description": "重点提醒" },
+        { "emoji": "🙌", "hexcode": "1F64C", "description": "太棒了 / 安利成功" },
+        { "emoji": "🤩", "hexcode": "1F929", "description": "惊艳 / 种草" },
+        { "emoji": "🥰", "hexcode": "1F970", "description": "治愈 / 幸福感" },
+        { "emoji": "💯", "hexcode": "1F4AF", "description": "100分推荐" },
+        { "emoji": "🎯", "hexcode": "1F3AF", "description": "精准种草" }
+      ]
+    }
+  ]
+}

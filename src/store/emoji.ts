@@ -23,6 +23,7 @@ export const useEmojiStore = defineStore("emoji", () => {
     const zhEmojis = await fetchEmojis("zh", { compact: true });
     // const shortcodes = await fetchShortcodes("zh", 'cldr');
     const messages = await fetchMessages("zh");
+    console.log(zhEmojis)
     emojiData.value = zhEmojis;
     emojiGroupData.value = messages.groups;
     loading.value = false;

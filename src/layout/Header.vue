@@ -39,8 +39,9 @@ const appStore = useAppStore()
               <NavigationMenuContent>
                 <ul class="grid w-[100px] gap-(--margin-xs)">
                   <li v-for="item in menu.children" :key="item.key">
-                    <NavigationMenuLink as-child>
+                    <NavigationMenuLink as-child class="text-center">
                       <a class="cursor-pointer" @click="appStore.handleMenuSelect(item.key)">{{ item.name }}</a>
+                      <div v-if="item.key === appStore.menuKey" class="w-full h-[2px] bg-(--color-primary)"></div>
                     </NavigationMenuLink>
                   </li>
                 </ul>

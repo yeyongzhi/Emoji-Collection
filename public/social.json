@@ -1,0 +1,21 @@
+{
+  "name": "社交媒体通用Emoji",
+  "data": [
+    {
+      "key": "top",
+      "name": "📱 社交媒体通用",
+      "data": [
+        { "emoji": "👍", "hexcode": "1F44D", "description": "点赞/支持" },
+        { "emoji": "👀", "hexcode": "1F440", "description": "关注/围观" },
+        { "emoji": "💬", "hexcode": "1F4AC", "description": "评论/聊天" },
+        { "emoji": "🔁", "hexcode": "1F501", "description": "转发/分享" },
+        { "emoji": "❤️", "hexcode": "2764", "description": "喜欢/心动" },
+        { "emoji": "🔥", "hexcode": "1F525", "description": "热门/爆款" },
+        { "emoji": "😭", "hexcode": "1F62D", "description": "感动/哭死" },
+        { "emoji": "🤣", "hexcode": "1F923", "description": "笑到打滚" },
+        { "emoji": "💯", "hexcode": "1F4AF", "description": "满分/认同" },
+        { "emoji": "👇", "hexcode": "1F447", "description": "点开看/往下拉" }
+      ]
+    }
+  ]
+}

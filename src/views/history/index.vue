@@ -10,6 +10,7 @@ import {
     EmptyMedia,
     EmptyTitle,
 } from '@/components/ui/empty'
+import { FolderCode } from 'lucide-vue-next'
 import {
     Select,
     SelectContent,
@@ -34,7 +35,7 @@ const historyData = computed(() => {
     })
     if (searchWord.value && searchWord.value.length > 0) {
         list = list.filter((item: any) => {
-            return item.label.includes(searchWord.value) || item.tags.includes(searchWord.value) || item.unicode.includes(searchWord.value)
+            return (item.label && item.label.includes(search.value)) || (item.tags && item.tags.includes(search.value)) || (item.unicode && item.unicode.includes(search.value))
         })
     }
     return list
@@ -57,7 +58,7 @@ const searchWord = computed(() => {
         <Empty class="w-full h-full" v-if="historyItems.length === 0">
             <EmptyHeader>
                 <EmptyMedia variant="icon">
-                    <!-- <FolderOpen /> -->
+                    <FolderCode />
                 </EmptyMedia>
             </EmptyHeader>
             <EmptyTitle>这里空空如也</EmptyTitle>
