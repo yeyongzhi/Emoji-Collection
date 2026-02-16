@@ -23,12 +23,14 @@ const refresh = () => {
   window.location.reload()
 }
 
+const APP_TITLE = import.meta.env.VITE_APP_TITLE
+
 </script>
 
 <template>
   <div class="border border-b w-full flex justify-between items-center h-[60px] p-(--padding-l) box-border">
     <div class="font-bold text-2xl flex items-center cursor-pointer" @click="refresh">
-      Emoji 使用指南【看这就够了】
+      ✨{{ APP_TITLE }}
     </div>
     <div class="flex justify-center items-center gap-x-(--margin-xs)">
       <NavigationMenu>
